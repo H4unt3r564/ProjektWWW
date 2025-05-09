@@ -7,8 +7,8 @@ body{
 #pasekMenu{
     width: 1000px;
     height:150px;
-    position:fixed;
-    top:0;
+    /* position:fixed;
+    top:0; */
     display:flex;
     justify-content: center;
     border:1px solid rgb(0, 0, 0);
@@ -51,10 +51,74 @@ main{
     width:1000px;
     height:1000px;
     border:1px solid rgb(65, 16, 200);
+    display:flex;
+    justify-content: center;
 }
+
+/* SLIDER */
+#slider{
+    width:100%;
+    height:30%;
+    border:1px dotted black;
+    display:flex;
+    /* align-items:center; */
+}
+
+#zdjecia{
+    width:80%;
+    height:100%;
+}
+
+#zdjecia img{
+    width:100%;
+    height:100%;
+    display: none;
+}
+
+#zdjecia .obrazekNaSliderze{
+    display:block;
+    animation: przesuwanie 0.5s ease-in-out;
+}
+
+@keyframes przesuwanie{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.strzalka{
+    width:10%;
+    height:100%;
+    /* border:1px solid black; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background:none;
+}
+
+.strzalka button{
+    border-radius: 50%;
+    border:0;
+    opacity:0.5;
+    width:40%;
+    height:10%;
+    font-size:x-large;
+    cursor:pointer;
+}
+
 
 footer{
     width:1000px;
     height: 150px;
     border:1px solid rgb(12, 211, 78);
 }
+
+/* @media screen and (max-width:600px){
+    main{
+        background:pink;
+    }
+} */
