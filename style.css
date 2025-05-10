@@ -58,7 +58,41 @@ main{
     
     width: 240px;
     height:270px;
+
 }
+
+#bruno{
+    width: 240px;
+    height: 270px;
+
+}
+
+#chihiro{
+    width: 240px;
+    height: 270px;
+}
+
+
+.Nino{
+    float: left;
+    width:33.33%;
+    padding: 5px;
+}
+.Bruno{
+    float: left;
+    width: 33.33%;
+    content:"";
+    padding: 5px;
+}
+.Chihiro{
+    float: centre;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+
+
+
 
 main>p{
     padding-top:25px ;
