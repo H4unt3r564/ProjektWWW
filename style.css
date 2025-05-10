@@ -7,7 +7,7 @@ body{
 #pasekMenu{
     width: 1000px;
     height:150px;
-    position:fixed;
+    /* position:fixed; */
     top:0;
     display:flex;
     justify-content: center;
@@ -51,6 +51,17 @@ main{
     width:1000px;
     height:1000px;
     border:1px solid rgb(65, 16, 200);
+    text-align: center;
+}
+
+#nino{
+    
+    width: 240px;
+    height:270px;
+}
+
+main>p{
+    padding-top:25px ;
 }
 
 footer{
