@@ -1,34 +1,21 @@
-obrazki = document.querySelectorAll(".obrazek");
+obrazki = document.querySelectorAll(".obrazek")
 
-obrazki[0].className = "obrazekNaSliderze";
+obrazki[0].className = "obrazekAktywny"
 
-function wLewo(){
-    const obecnyObrazek = document.querySelector(".obrazekNaSliderze");
+function zmianaObrazka(kierunek){
+    const obecnyObrazek = document.querySelector(".obrazekAktywny");
     const index = Array.from(obrazki).indexOf(obecnyObrazek);
-
     let nowyIndex;
-    if (index === 0) {
-        nowyIndex = obrazki.length - 1;
-    } else {
-        nowyIndex = index - 1;
+
+    switch(kierunek){
+        case "lewo":
+            nowyIndex = index === 0 ? obrazki.length - 1 : index - 1;
+            break;
+        case "prawo":
+            nowyIndex = index === obrazki.length - 1 ? 0 : index + 1;
+            break;
     }
     obecnyObrazek.className = "obrazek";
-    obrazki[nowyIndex].className= "obrazekNaSliderze";
+    obrazki[nowyIndex].className = "obrazekAktywny";
+    obrazki[nowyIndex].style.animationName = kierunek === "lewo" ? "przewijanieZLewej" : "przewijanieZPrawej";
 }
-
-function wPrawo(){
-    const obecnyObrazek = document.querySelector(".obrazekNaSliderze");
-    const index = Array.from(obrazki).indexOf(obecnyObrazek);
-
-    let nowyIndex;
-    if (index === obrazki.length - 1) {
-        nowyIndex = 0;
-    } else {
-        nowyIndex = index + 1;
-    }
-    obecnyObrazek.className = "obrazek";
-    obrazki[nowyIndex].className = "obrazekNaSliderze";
-    
-}
-
-// setInterval(wPrawo, 3000);
