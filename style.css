@@ -49,7 +49,7 @@ body{
 
 main{
     width:1000px;
-    height:1000px;
+    height:10000px;
     border:1px solid rgb(65, 16, 200);
     text-align: center;
 }
@@ -72,6 +72,31 @@ main{
     height: 270px;
 }
 
+#hugo{
+    width: 240px;
+    height: 270px;
+}
+
+#ruda{
+    width: 240px;
+    height: 270px;
+}
+
+#rockstar{
+    width: 240px;
+    height: 270px;
+}
+
+#niunia{
+    width: 240px;
+    height: 270px;
+}
+
+#misio{
+    width: 240px;
+    height: 270px;
+}
+
 
 .Nino{
     float: left;
@@ -85,10 +110,48 @@ main{
     padding: 5px;
 }
 .Chihiro{
-    float: centre;
+    float: left;
     width: 33.33%;
     content: "";
     padding: 5px;
+}
+.Hugo{
+    float: left;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+.ruda{
+    float: left;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+.rockstar{
+    float: left;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+.niunia{
+    float: left;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+.misio{
+    float: left;
+    width: 33.33%;
+    content: "";
+    padding: 5px;
+}
+
+.prostokat{
+    float: left;
+    overflow: auto;
+}
+.prostokat svg rect {
+    filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
 }
 
 
