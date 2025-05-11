@@ -146,9 +146,11 @@ main{
     padding: 5px;
 }
 
-.prostokat{
-    float: left;
-    overflow: auto;
+.prostokat {
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    word-wrap: break-word; 
 }
 .prostokat svg rect {
     filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
