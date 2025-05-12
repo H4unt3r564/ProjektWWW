@@ -54,96 +54,20 @@ main{
     text-align: center;
 }
 
-#nino{
-    
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#nino, #bruno, #chichiro, #hugo, #ruda, #rockstar, #niunia, #misio{
     width: 240px;
     height:270px;
-
-}
-
-#bruno{
-    width: 240px;
-    height: 270px;
-
-}
-
-#chihiro{
-    width: 240px;
-    height: 270px;
-}
-
-#hugo{
-    width: 240px;
-    height: 270px;
-}
-
-#ruda{
-    width: 240px;
-    height: 270px;
-}
-
-#rockstar{
-    width: 240px;
-    height: 270px;
-}
-
-#niunia{
-    width: 240px;
-    height: 270px;
-}
-
-#misio{
-    width: 240px;
-    height: 270px;
 }
 
 
-.Nino{
-    float: left;
-    width:33.33%;
-    padding: 5px;
-}
-.Bruno{
-    float: left;
-    width: 33.33%;
-    content:"";
-    padding: 5px;
-}
-.Chihiro{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
-}
-.Hugo{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
-}
-.ruda{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
-}
-.rockstar{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
-}
-.niunia{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
-}
-.misio{
-    float: left;
-    width: 33.33%;
-    content: "";
-    padding: 5px;
+.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio{
+    width:30%;
+    padding:5px;
 }
 
 .prostokat {
