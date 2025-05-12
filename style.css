@@ -12,20 +12,6 @@ body{
     display:flex;
     justify-content: center;
     border:1px solid rgb(0, 0, 0);
-body{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: rgb(201, 185, 163);
-}
-#pasekMenu{
-    width: 1000px;
-    height:150px;
-    /* position:fixed; */
-    top:0;
-    display:flex;
-    justify-content: center;
-    border:1px solid rgb(0, 0, 0);
     background: #EFDCCC;
 }
 
@@ -70,14 +56,19 @@ main{
 
 
 #nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
-    width: 240px;
+    width: 70%;
     height: 270px;
     border: 1px solid #A18167;
+    border-radius: 10px;
 }
 
 .Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya{
     width:30%;
     padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .row{
@@ -85,7 +76,9 @@ main{
     flex-wrap: wrap;
 }
 .row p{
+    width: 70%;
     border:1px solid #A18167;
+    border-radius: 5px;
 }
 
 .prostokat {
