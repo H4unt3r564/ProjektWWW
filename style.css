@@ -16,11 +16,10 @@ header {
 }
 
 #pasekMenu {  
-    width: 90vw;
-    height:150px;
+    width: 1000vw;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
-    top: 0;
     display: flex;
     border: 1px solid rgb(0, 0, 0);
     background: linear-gradient(175deg, #d4c5b9, #efdccd);
@@ -42,7 +41,6 @@ header {
     width: 100%;
     height: 100%;
     border: 1px solid black;
-    
 }
 
 #menu ul {
@@ -69,6 +67,114 @@ main {
     border: 1px solid rgb(65, 16, 200);
 }
 
+#slider{
+    width:100%;
+    height:30%;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    position:relative; /*do animacji */
+    overflow:hidden; /*do animacji */
+}
+
+.strzalka{
+    position: absolute;
+    top:45%;
+    z-index: 3;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0.4;
+    width: 3rem;
+    height: 3rem;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.strzalka:hover{
+    opacity:0.7;
+    transition:1s;
+}
+
+.strzalka:first-of-type{
+    left:1%;
+}
+.strzalka:last-of-type{
+    right:1%;
+}
+
+.obrazek{
+    display: none;
+}
+
+.obrazekAktywny{
+    position:absolute;
+    display: block;
+    width:100%;
+    height:100%;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes przewijanieZPrawej{
+    from{
+        transform: translateX(100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes przewijanieZLewej{
+    from{
+        transform: translateX(-100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
+    width: 70%;
+    height: 270px;
+    border: 1px solid #A18167;
+    border-radius: 10px;
+}
+
+.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya{
+    width:30%;
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+.row p{
+    width: 70%;
+    border:1px solid #A18167;
+    border-radius: 5px;
+}
+
+.prostokat {
+
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center; 
+}
+.prostokat svg rect {
+    filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
+}
+
 footer {
     height: 18%;
     width: 100%;
@@ -81,3 +187,9 @@ footer {
     bottom: 0;
     background-color: black;
 }
+
+/* @media screen and (max-width:600px){
+    main{
+        background:pink;
+    }
+} */
