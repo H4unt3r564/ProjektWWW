@@ -178,14 +178,40 @@ main {
 footer {
     height: 18%;
     width: 100%;
-    display: block;
-    position: fixed;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 1rem 2rem;
     bottom: 0;
     background-color: black;
+    color: white;
+    position: fixed;
+}
+
+.footer-full {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.footer-left {
+    text-align: left;
+    flex-basis: 30%;
+}
+
+.footer-middle {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    flex-basis: 30%;
+}
+
+.footer-left p, .footer-center p, .footer-right p {
+    margin: 0;
 }
 
 /* @media screen and (max-width:600px){
