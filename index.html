@@ -1,98 +1,110 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Strona główna</title>
-</head>
-<body>
-    <header>
-        <section id="pasekMenu">
-            <section id="logo">
-                <img src="logo.jpg" alt="logo">
-            </section>
-            <section id="menu">
-                <ul>
-                    <li><a style="color: #A18167; font-family:Georgia, 'Times New Roman', Times, serif;" href="index.html">Strona główna</a></li>
-                    <li><a style="color: #A18167; font-family:Georgia, 'Times New Roman', Times, serif;"href="psy.html">Adoptuj Psa</a></li>
-                    <li><a style="color: #A18167; font-family:Georgia, 'Times New Roman', Times, serif;"href="koty.html">Adoptuj Kota</a></li>
-                    <li><a style="color: #A18167; font-family:Georgia, 'Times New Roman', Times, serif;"href="kontakt.html">Kontakt</a></li>
+body{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(201, 185, 163);
+}
+#pasekMenu{
+    width: 1000px;
+    height:150px;
+    /* position:fixed; */
+    top:0;
+    display:flex;
+    justify-content: center;
+    border:1px solid rgb(0, 0, 0);
+    background: #EFDCCC;
+}
 
-                </ul>
-            </section>
-        </section>
-    </header>
-    <main>
-    
-        <section id="czekajacezwierzaki">
-            <p>&#127872 &#127872 &#127872</p>
-            <h3 style="color: #A18167; font-family:Georgia,'Times New Roman'">Pieski i kotki które czekają najdłużej</h3>
-        <div class="row">
-            <div class="Nino">
-                <img src ="nino.jpg" alt = "nino" id= "nino"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Nino</p> 
-            </div>
-            <div class="Bruno">
-                <img src ="bruno.jpg" alt = "bruno" id= "bruno"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Bruno</p>
-            </div>
-            <div class="Chihiro">
-                <img src ="Chihiro.jpg" alt = "chihiro" id="chihiro"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Chihiro</p>
-            </div>
-            <div class="Hugo">
-                <img src ="Hugo.jpg" alt = "hugo" id= "hugo"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Hugo</p>
-            </div>
-            <div class="Ruda">
-                <img src ="ruda.jpg" alt = "ruda" id= "ruda"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Ruda</p>
-            </div>
-            <div class="Rockstar">
-                <img src ="rockstar.jpg" alt = "rockstar" id= "rockstar"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Rockstar</p>
-            </div>
-            <div class="Niunia">
-                <img src ="niunia.jpg" alt = "niunia" id= "niunia"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Niunia</p>
-            </div>
-            <div class="Misio">
-                <img src ="misio.jpg" alt = "misio" id= "misio"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Misio</p>
-            </div>
-            <div class="Alya">
-                <img src ="alya.jpg" alt = "alya" id= "alya"/>
-                <p style="color: #A18167; font-family:Georgia,'Times New Roman'">Alya</p>
-            </div>
-        </div> 
-        </section>
+#logo{
+    width:200px;
+    height:100%;
+    border:1px solid black;
+}
 
-    <section id="Oadopcji">
-        <div class="prostokat">
-            <svg width="500" height="330">
-                <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-                <text x="210" y="60" text-anchor="middle" font-size="30" fill="#A18167">
-                O adopcji
-                </text>
-                <text x="50%" y="30%" text-anchor="middle" font-size="20" fill="#A18167">
-                <tspan x="210" dy="5">Aby adoptować psa/kota</tspan>
-                <tspan x="210" dy="20">przede wszystkim zalecamy</tspan>
-                <tspan x="210" dy="20">umówić się na spotkanie, które mogą</tspan>
-                <tspan x="210" dy="20">państwo zrealizować, dzwoniąc pod numer </tspan>
-                <tspan x="210" dy="20">+48 444 555 666</tspan>
-                <tspan x="210" dy="20">bądź umówić się osobiście w godzinach</tspan>
-                <tspan x="210" dy="20">10:00 - 17:00</tspan>
-                <tspan x="210" dy="20">Zapraszamy! &#128572</tspan>
-                </text>
-            </svg>
-        </div>
-    </section>
+#logo img{
+    width:100%;
+    height:100%;
+}
+
+#menu{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu ul{
+    list-style-type: none;
+    display:flex;
+}
+#menu ul li{
+    margin-left:10px;
+}
+#menu a{
+    text-decoration: none;
+    color:black;
+}
+
+main{
+    width:1000px;
+    height:10000px;
+    border:1px solid rgb(65, 16, 200);
+    text-align: center;
+}
 
 
+#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
+    width: 70%;
+    height: 270px;
+    border: 1px solid #A18167;
+    border-radius: 10px;
+}
 
-    </main>
-    <footer>
+.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya{
+    width:30%;
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+.row p{
+    width: 70%;
+    border:1px solid #A18167;
+    border-radius: 5px;
+}
+
+.prostokat {
+
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center; 
+}
+.prostokat svg rect {
+    filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
+}
+
+
+
+
+main>p{
+    padding-top:25px ;
+}
+
+footer{
+    width:1000px;
+    height: 150px;
+    border:1px solid rgb(12, 211, 78);
+}
 
     </footer>
 </body>
