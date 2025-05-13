@@ -1,6 +1,8 @@
-/* nie dodawać display: flex do
-body i position: fixed do
-#pasekMenu, rozwala środkowanie */
+/* nie dodawać:
+-display: flex do body
+-position: fixed do #pasekMenu
+-width do #logo */
+
 body {
     box-sizing: border-box;
     min-height: 100vh;
@@ -10,7 +12,6 @@ body {
 }
 
 header {
-    
     position: center;
     top: 0;
 }
@@ -26,9 +27,8 @@ header {
 }
 
 #logo {
-    width:200px;
-    height:100%;
-    border:1px solid black;
+    height: 100%;
+    border: 1px solid black;
 }
 
 #logo img {
@@ -67,7 +67,7 @@ main {
     border: 1px solid rgb(65, 16, 200);
 }
 
-#slider{
+#slider {
     width:100%;
     height:30%;
     border:1px solid black;
@@ -77,7 +77,7 @@ main {
     overflow:hidden; /*do animacji */
 }
 
-.strzalka{
+.strzalka {
     position: absolute;
     top:45%;
     z-index: 3;
@@ -90,23 +90,23 @@ main {
     cursor: pointer;
 }
 
-.strzalka:hover{
+.strzalka:hover {
     opacity:0.7;
     transition:1s;
 }
 
-.strzalka:first-of-type{
+.strzalka:first-of-type {
     left:1%;
 }
-.strzalka:last-of-type{
+.strzalka:last-of-type {
     right:1%;
 }
 
-.obrazek{
+.obrazek {
     display: none;
 }
 
-.obrazekAktywny{
+.obrazekAktywny {
     position:absolute;
     display: block;
     width:100%;
@@ -115,36 +115,36 @@ main {
     animation-timing-function: ease-in-out;
 }
 
-@keyframes przewijanieZPrawej{
-    from{
-        transform: translateX(100%);
+@keyframes przewijanieZPrawej {
+    from {
+        transform: translateX(50%);
         opacity:0;
     }
-    to{
+    to {
         transform:translateX(0);
         opacity:1;
     }
 }
 
-@keyframes przewijanieZLewej{
-    from{
-        transform: translateX(-100%);
+@keyframes przewijanieZLewej {
+    from {
+        transform: translateX(-50%);
         opacity:0;
     }
-    to{
+    to {
         transform:translateX(0);
         opacity:1;
     }
 }
 
-#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
+#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya {
     width: 70%;
     height: 270px;
     border: 1px solid #A18167;
     border-radius: 10px;
 }
 
-.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya{
+.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya {
     width:30%;
     padding:5px;
     display: flex;
@@ -153,11 +153,11 @@ main {
     align-items: center;
 }
 
-.row{
+.row {
     display:flex;
     flex-wrap: wrap;
 }
-.row p{
+.row p {
     width: 70%;
     border:1px solid #A18167;
     border-radius: 5px;
