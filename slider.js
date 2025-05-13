@@ -2,12 +2,12 @@ obrazki = document.querySelectorAll(".obrazek")
 
 obrazki[0].className = "obrazekAktywny"
 
-function zmianaObrazka(kierunek){
+function zmianaObrazka(kierunek) {
     const obecnyObrazek = document.querySelector(".obrazekAktywny");
     const index = Array.from(obrazki).indexOf(obecnyObrazek);
     let nowyIndex;
 
-    switch(kierunek){
+    switch(kierunek) {
         case "lewo":
             nowyIndex = index === 0 ? obrazki.length - 1 : index - 1;
             break;
