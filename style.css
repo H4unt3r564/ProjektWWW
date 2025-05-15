@@ -1,13 +1,16 @@
+*{
+    box-sizing: border-box; /*layout sie nie rozjezdza; auotmatycznie zwartosc sie zmniejsza zeby wszystko dopasowac*/
+}
+
 body{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
     background: rgb(201, 185, 163);
+    margin:0;
 }
 #pasekMenu{
-    width: 1000px;
-    height:150px;
-    /* position:fixed; */
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height:20.5vh;
     top:0;
     display:flex;
     justify-content: center;
@@ -16,7 +19,9 @@ body{
 }
 
 #logo{
-    width:200px;
+    /* width:200px; */
+    min-width:150px;
+    width:13vw;
     height:100%;
     border:1px solid black;
 }
@@ -48,23 +53,101 @@ body{
 }
 
 main{
-    width:1000px;
-    height:10000px;
+    max-width:100%;
+    width:100vw;
+    max-height:100%;
     border:1px solid rgb(65, 16, 200);
     text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
+#slider{
+    width:70%;
+    height:80vh;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    position:relative; /*do animacji */
+    overflow:hidden; /*do animacji */
+}
+
+.strzalka{
+    position: absolute;
+    top:45%;
+    z-index: 3;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0.4;
+    width: 3rem;
+    height: 3rem;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.strzalka:hover{
+    opacity:0.7;
+    transition:0.7s;
+}
+
+.strzalka:first-of-type{
+    left:1%;
+}
+.strzalka:last-of-type{
+    right:1%;
+}
+
+.obrazek{
+    display: none;
+}
+
+.obrazekAktywny{
+    position:absolute;
+    display: block;
+    width:100%;
+    height:100%;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes przewijanieZPrawej{
+    from{
+        transform: translateX(100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes przewijanieZLewej{
+    from{
+        transform: translateX(-100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
 #nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
     width: 70%;
-    height: 270px;
+    height:37vh;
     border: 1px solid #A18167;
     border-radius: 10px;
 }
 
 .zwierzak{
-    width:30%;
-    padding:5px;
+    border:1px solid red;
+    min-width:300px;
+    width:30vw;
+    margin-left:1vw;
+    margin-top:2vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -73,8 +156,10 @@ main{
 
 .row{
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
+
 .row p{
     width: 70%;
     border:1px solid #A18167;
@@ -82,26 +167,25 @@ main{
 }
 
 .prostokat {
-
     width: 100%;
     height: auto; 
     overflow: hidden;
     word-wrap: break-word;
-    text-align: center; 
+    text-align: center;
+    margin-left:3.2vw;
 }
+
 .prostokat svg rect {
     filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
 }
-
-
-
 
 main>p{
     padding-top:25px ;
 }
 
 footer{
-    width:1000px;
-    height: 150px;
+    max-width:100%;
+    width:100vw;
+    height:20.5vh;
     border:1px solid rgb(12, 211, 78);
 }
