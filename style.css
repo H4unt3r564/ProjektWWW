@@ -1,83 +1,81 @@
-/* nie dodawać:
--display: flex do body
--position: fixed do #pasekMenu
--width do #logo */
-
-body {
-    box-sizing: border-box;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #8b4513, #fdab5a);
+*{
+    box-sizing: border-box; /*layout sie nie rozjezdza; auotmatycznie zwartosc sie zmniejsza zeby wszystko dopasowac*/
 }
 
-header {
-    position: center;
-    top: 0;
+body{
+    background: rgb(201, 185, 163);
+    margin:0;
+}
+#pasekMenu{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height:20.5vh;
+    top:0;
+    display:flex;
+    justify-content: center;
+    border:1px solid rgb(0, 0, 0);
+    background: #EFDCCC;
 }
 
-#pasekMenu {  
-    width: 100%;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    border: 1px solid rgb(0, 0, 0);
-    background: linear-gradient(175deg, #d4c5b9, #efdccd);
+#logo{
+    /* width:200px; */
+    min-width:150px;
+    width:13vw;
+    height:100%;
+    border:1px solid black;
 }
 
-#logo {
-    height: 100%;
-    border: 1px solid black;
-}
-
-#logo img {
-    height: 99%;
-    width: 99,7%;
-    max-width: 3000px;
-}
-
-#menu {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-}
-
-#menu ul {
-    list-style-type: none;
-    display: flex;
-}
-#menu ul li {
-    margin-left: 10px;
-}
-#menu a {
-    text-decoration: none;
-    font-weight: 535; 
-    color: black;
-}
-
-main {
-    width: 90vw;
-    max-width: 1000px;
-    height: 75vh;
-    margin: 80px auto 0 auto; /* odstęp od menu */
-    padding: 15px;
-    box-sizing: border-box;
-    background: violet;
-    border: 1px solid rgb(65, 16, 200);
-}
-
-#slider {
+#logo img{
     width:100%;
-    height:30%;
+    height:100%;
+}
+
+#menu{
+    width:100%;
+    height:100%;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu ul{
+    list-style-type: none;
+    display:flex;
+}
+#menu ul li{
+    margin-left:10px;
+}
+#menu a{
+    text-decoration: none;
+    color:black;
+}
+
+main{
+    max-width:100%;
+    width:100vw;
+    max-height:100%;
+    border:1px solid rgb(65, 16, 200);
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#slider{
+    width:70%;
+    height:80vh;
     border:1px solid black;
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    position:relative; /*do animacji */
+    overflow:hidden; /*do animacji */
 }
 
-.strzalka {
+.strzalka{
     position: absolute;
     top:45%;
     z-index: 3;
@@ -90,74 +88,78 @@ main {
     cursor: pointer;
 }
 
-.strzalka:hover {
+.strzalka:hover{
     opacity:0.7;
-    transition: 1s;
+    transition:0.7s;
 }
 
-.strzalka:first-of-type {
-    left: 1%;
+.strzalka:first-of-type{
+    left:1%;
 }
-.strzalka:last-of-type {
-    right: 1%;
+.strzalka:last-of-type{
+    right:1%;
 }
 
-.obrazek {
+.obrazek{
     display: none;
 }
 
-.obrazekAktywny {
-    position: absolute;
+.obrazekAktywny{
+    position:absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    width:100%;
+    height:100%;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
 
-@keyframes przewijanieZPrawej {
-    from {
-        transform: translateX(50%);
-        opacity: 40%;
+@keyframes przewijanieZPrawej{
+    from{
+        transform: translateX(100%);
+        opacity:0;
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes przewijanieZLewej {
-    from {
-        transform: translateX(-50%);
-        opacity: 40%;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
+    to{
+        transform:translateX(0);
+        opacity:1;
     }
 }
 
-#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya {
+@keyframes przewijanieZLewej{
+    from{
+        transform: translateX(-100%);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
     width: 70%;
-    height: 270px;
+    height:37vh;
     border: 1px solid #A18167;
     border-radius: 10px;
 }
 
-.Nino, .Bruno, .Chihiro, .Hugo, .Ruda, .Rockstar, .Niunia, .Misio, .Alya {
-    width:30%;
-    padding:5px;
+.zwierzak{
+    min-width:300px;
+    width:30vw;
+    margin-left:1vw;
+    margin-top:2vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.row {
+.row{
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
-.row p {
+
+.row p{
     width: 70%;
     border:1px solid #A18167;
     border-radius: 5px;
@@ -168,54 +170,21 @@ main {
     height: auto; 
     overflow: hidden;
     word-wrap: break-word;
-    text-align: center; 
+    text-align: center;
+    margin-left:3.2vw;
 }
+
 .prostokat svg rect {
     filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
 }
 
-footer {
-    height: 18%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    background-color: black;
-    color: white;
-    position: fixed;
+main>p{
+    padding-top:25px ;
 }
 
-.footer-full {
-    align-items: center;
-    display: flex;
-    font-size: 30px;
-    width: 90%;
-    box-sizing: border-box;
-    justify-content: space-evenly;
-    padding: 0 20px;
+footer{
+    max-width:100%;
+    width:100vw;
+    height:20.5vh;
+    border:1px solid rgb(12, 211, 78);
 }
-
-.footer-middle {
-    flex: 1;
-    text-align: center;
-}
-.footer-left {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.footer-left p, .footer-center p, .footer-right p {
-    margin: 0;
-}
-
-/* @media screen and (max-width:600px){
-    main{
-        background:pink;
-    }
-} */
