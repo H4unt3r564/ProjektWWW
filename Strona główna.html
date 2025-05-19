@@ -1,78 +1,128 @@
 <!DOCTYPE html>
-<!-- saved from url=(0033)http://127.0.0.1:5500/slider.html -->
-<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="slider.js" defer=""></script>
+    <script src="main.js" defer></script>
     <title>Strona główna</title>
 </head>
 <body>
     <header>
         <section id="pasekMenu">
             <section id="logo">
-                <img src="./Strona główna_files/logo.jpg" alt="logo">
+                <img src="logo.jpg" alt="logo">
             </section>
             <section id="menu">
                 <ul>
-                    <li><a href="http://127.0.0.1:5500/index.html">Strona główna</a></li>
-                    <li><a href="http://127.0.0.1:5500/psy.html">Psy</a></li>
-                    <li><a href="http://127.0.0.1:5500/koty.html">Koty</a></li>
-                    <li><a href="http://127.0.0.1:5500/kontakt.html">Kontakt</a></li>
+                    <li><a href="Strona Główna.html">Strona główna</a></li>
+                    <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+                    <li><a href="AdoptujKota.html" >Adoptuj Kota</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
                 </ul>
+                <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
             </section>
         </section>
     </header>
+    <div id="menuRozwijane" class="ukryteMenu">
+        <ul>
+            <li><a href="Strona Główna.html">Strona główna</a></li>
+            <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+            <li><a href="AdoptujKota.html">Adoptuj Kota</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
     <main>
-        <div id="slider">
+         <div id="slider">
 			<button class="strzalka" onclick="zmianaObrazka('lewo')">&lt;</button>
-			<img src="pobrane.jpg" alt="obrazek" class="obrazek">
-			<img src="pobrane (1).jpg" alt="obrazek" class="obrazek">
-			<img src="pobrane (2).jpg" alt="obrazek" class="obrazek">
-			<img src="pobrane (3).jpg" alt="obrazek" class="obrazek">
+			<img src="nino.jpg" alt="obrazek" class="obrazek">
+			<img src="bruno.jpg" alt="obrazek" class="obrazek">
+			<img src="Chihiro.jpg" alt="obrazek" class="obrazek">
+			<img src="niunia.jpg" alt="obrazek" class="obrazek">
 			<button class="strzalka" onclick="zmianaObrazka('prawo')">&gt;</button>
     	</div>
+        <section id="czekajacezwierzaki">
+            <p>&#127872 &#127872 &#127872</p>
+            <h3 style="color: #A18167; font-family:Georgia,'Times New Roman'">Pieski i kotki które czekają najdłużej</h3>
+        <div class="row">
+            <div class="zwierzak">
+                <img src ="nino.jpg" alt = "nino" id= "nino"/>
+                <p>Nino</p> 
+            </div>
+            <div class="zwierzak">
+                <img src ="bruno.jpg" alt = "bruno" id= "bruno"/>
+                <p>Bruno</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="Chihiro.jpg" alt = "chihiro" id="chihiro"/>
+                <p>Chihiro</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="Hugo.jpg" alt = "hugo" id= "hugo"/>
+                <p>Hugo</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="ruda.jpg" alt = "ruda" id= "ruda"/>
+                <p>Ruda</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="rockstar.jpg" alt = "rockstar" id= "rockstar"/>
+                <p>Rockstar</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="niunia.jpg" alt = "niunia" id= "niunia"/>
+                <p>Niunia</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="misio.jpg" alt = "misio" id= "misio"/>
+                <p>Misio</p>
+            </div>
+            <div class="zwierzak">
+                <img src ="alya.jpg" alt = "alya" id= "alya"/>
+                <p>Alya</p>
+            </div>
+        </div>
+        <div id="modal">
+            <div id="modalContent">
+                <div id="modalZdjecie">
+                    <img src="nino.jpg" alt="test">
+                </div>
+                <div id="modalDane">
+                    <h2 id="modalImie"></h2>
+                    <div id="modalWiek"></div>
+                    <div id="modalOpis"></div>
+                    <button id="guzikX" onclick="zamknijModal()">X</button>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <section id="Oadopcji">
+        <div class="prostokat">
+            <svg width="500" height="330">
+                <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
+                <text x="210" y="60" text-anchor="middle" font-size="30" fill="#A18167">
+                O adopcji
+                </text>
+                <text x="50%" y="30%" text-anchor="middle" font-size="20" fill="#A18167">
+                <tspan x="210" dy="5">Aby adoptować psa/kota</tspan>
+                <tspan x="210" dy="20">przede wszystkim zalecamy</tspan>
+                <tspan x="210" dy="20">umówić się na spotkanie, które mogą</tspan>
+                <tspan x="210" dy="20">państwo zrealizować, dzwoniąc pod numer </tspan>
+                <tspan x="210" dy="20">+48 444 555 666</tspan>
+                <tspan x="210" dy="20">bądź umówić się osobiście w godzinach</tspan>
+                <tspan x="210" dy="20">10:00 - 17:00</tspan>
+                <tspan x="210" dy="20">Zapraszamy! &#128572</tspan>
+                </text>
+            </svg>
+        </div>
+    </section>
+
+
+
     </main>
     <footer>
 
     </footer>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-</body></html>
+</body>
+</html>
