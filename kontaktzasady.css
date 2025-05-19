@@ -100,35 +100,49 @@ body{
     background-color: #E9D3C0;
 }
 
-.Psiaki{
-    width:30%;
-    padding:5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#ciapka, #bombardinio, #bunia, #mysza, #smietanka, #bruno, #szczyl{
-    width: 70%;
-    height: auto;
-    border: 1px solid #A18167;
+.contact-details, .contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.contact-item strong {
+    font-weight: 700;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 10px;
-    margin-bottom: 15%;
-    margin-left: 70%;
-}
-.boxnapieski img {
-
-    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-.boxnapieski {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: flex-start;
+form button {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
 }
 
-.prostokat svg{
-    display: block;
+form button:hover {
+    background-color: #666;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: none;
 }
