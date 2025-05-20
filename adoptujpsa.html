@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="adoptujpsa.css">
+    <script src="main.js" defer></script>
     <title>Adoptuj psa</title>
 </head>
-<body class="darkmode">
+<body>
+<!-- <body class="darkmode"> -->
 <header>
     <section id="pasekMenu">
         <div id="pasekMenuContent">
             <section id="logo">
-                <img src="logo.jpg" alt="logo">
+                <img src="logonowe.jpg" alt="logo">
             </section>
             <section id="menu">
                 <ul>
                     <li><a id="glowna" href="schronisko.html">Strona główna</a></li>
                     <li><a id="pies" href="AdoptujPsa.html">Adoptuj Psa lub Kota</a></li>
                     <li><a id="kontakt" href="kontakt.html">Kontakt</a></li>
+                    <li><button class="guzikDarkmode">Darkmode</button></li>
                 </ul>
+                <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
             </section>
-        </div>
-    </section>
-</header>
+        </section>
+        <div id="menuRozwijane" class="ukryteMenu">
+        <ul>
+            <li><a href="Strona Główna.html">Strona główna</a></li>
+            <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li><button class="guzikDarkmode">Darkmode</button></li>
+        </ul>
+    </div>
+    </header>
 
+    <main>
 <h2 id="napis">Poznaj nasze psiaki!</h2>
 
 <div class="Psiaki">
@@ -163,7 +175,7 @@
     </div>
 </div> 
 
-<hr class="kreska">
+<!-- <hr class="kreska"> -->
 
 <h2 id="napis2">Poznaj nasze kociaki!</h2>
 
@@ -296,8 +308,6 @@
     </div>
     </div>
 </div> 
-
-        
 
 
 
