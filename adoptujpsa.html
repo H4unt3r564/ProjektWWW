@@ -1,119 +1,217 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="adoptujpsa.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="adoptujpsa (2).css" />
+    <script src="psy.js" defer></script>
     <title>Adoptuj psa</title>
 </head>
 <body>
-<header>
-    <section id="pasekMenu">
-        <div id="pasekMenuContent">
+    <header>
+        <section id="pasekMenu">
             <section id="logo">
-                <img src="logo.jpg" alt="logo">
+                <img src="logo.jpg" alt="logo" />
             </section>
             <section id="menu">
                 <ul>
-                    <li><a id="glowna" href="Strona główna.html">Strona główna</a></li>
-                    <li><a id="pies" href="AdoptujPsa.html">Adoptuj Psa</a></li>
-                    <li><a id="kot" href="AdoptujKota.html">Adoptuj Kota</a></li>
-                    <li><a id="kontakt" href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="Strona Główna.html">Strona główna</a></li>
+                    <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><button class="guzikDarkmode">Darkmode</button></li>
                 </ul>
+                <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
             </section>
+        </section>
+        <div id="menuRozwijane" class="ukryteMenu">
+            <ul>
+                <li><a href="Strona Główna.html">Strona główna</a></li>
+                <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><button class="guzikDarkmode">Darkmode</button></li>
+            </ul>
         </div>
-    </section>
-</header>
+    </header>
 
-<h2 id="napis">Poznaj nasze psiaki!</h2>
+    <main>
+        <h2>Poznaj nasze psiaki!</h2>
+        <section class="Psiaki">
 
-<div class="Psiaki">
-    
-    <div class="boxnapieski">
-    <img src="ciapka.jpg" alt="ciapka" id="ciapka"/>
+            <article class="boxnapieski">
+                <img src="ciapka.jpg" alt="Ciapka" id="ciapka" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 HEJ!! Jestem Ciapka, mam 6 miesięcy, a w
+                            schronisku jestem 3 miesiące.
+                            Jestem energicznym szczeniakiem, który chętnie rozszarpie Twoje kapcie, meble jak dam radę i firanki.
+                            Będe dużym psiakiem, co jest moją największą zaletą!!
+                            P.S. lubie koty, ale one mnie już niekoniecznie :( 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
+            <article class="boxnapieski">
+                <img src="szczyl.jpg" alt="Szczyl" id="szczyl" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Hej!! Jestem Szczyl, mam 3 lata, a w
+                            schronisku jestem od 2 lat.
+                            Jestem spokojnym psem, prędzej obejrzę z Tobą serial na kanapie niż pobiegam za patykiem na spacerze.
+                            Więcej już nie urosnę i trzeba mnie dużo czesać.
+                            Dogaduję się z innymi pieskami, kotami, a nawet papugami. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-            <text x="30" y="60" font-size="18" fill="#5d4532">
-                <tspan x ="20" dy="5">&#128968 HEJ!! Jestem Ciapka, mam 6 miesięcy, a w</tspan>
-                <tspan x ="20" y="100">schronisku jestem 3 miesiące. Jestem energicznym</tspan>
-                <tspan x ="20" y="140">szczeniakiem, który chętnie rozszarpie Twoje</tspan>
-                <tspan x ="20" y="180">kapcie, meble jak dam radę i firanki. Będe dużym</tspan>
-                <tspan x ="20" y="220">psiakiem, co jest moją największą zaletą!!</tspan>
-                <tspan x ="20" y="260">P.S. lubie koty, ale one mnie już niekoniecznie :( &#128968</tspan>
-            
-            
-            </text>
-            
-            
-            
-    </svg>
-    </div>
-    </div>
+            <article class="boxnapieski">
+                <img src="śmietanka.jpg" alt="Śmietanka" id="smietanka" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Hejka!! Jestem Śmietanka, mam 5 lat, a w
+                            schronisku jestem 2 miesiące.
+                            Jestem spokojnym psiakiem, który mimo swojej spokojnej natury pójdzie na dłuuugi spacer, a najlepiej z dużą ilością ludzi i piesków.
+                            Jestem małym psem, trzeba czesać moje gęste włosy i dogadam się z każdym! 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="boxnapieski">
-    <img src="szczyl.jpg" alt="szczyl" id="szczyl"/>
+            <article class="boxnapieski">
+                <img src="bombardinio.jpg" alt="Bombardinio" id="bombardinio" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 HEEEJ!1!! Jestem Bombardinio, mam 4 miesięce,
+                            a w schronisku jestem od urodzenia.
+                            Mam duuzo energii, kocham być na podwórku i uwielbiam wszystkie zabawki!! (szczególnie skarpety)
+                            Urosnę na największego psa na świecie!
+                            Dogaduję się z każdym, ale najbardziej lubię wiewiórki 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
+            <article class="boxnapieski">
+                <img src="mysza.jpg" alt="Mysza" id="mysza" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Witam!! Jestem Mysza, mam 10 lat, a w
+                            schronisku jestem od 3 lat.
+                            Jestem starszym psem więc mimo, że kocham zabawę, to nie zawsze mam na nią energię,
+                            ale to nic bo kocham leżeć i nic nie robić tak samo jak się bawić!
+                            Nie dogaduję się z większością zwierzaków, bo się mnie boją :( 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-    </svg>
-    </div>
-    </div>
+            <article class="boxnapieski">
+                <img src="bunia.jpg" alt="Bunia" id="bunia" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Hejka!! Jestem Bunia, mam 7 lat, a w
+                            schronisku jestem 5 lat.
+                            Jestem energicznym psiakiem i zaskoczę Cię swoimi sztuczkami!!
+                            Pomijając te nudne, w stylu daj łapę, reaguję nawet na backflipa!!!!
+                            Nie lubię się z innymi psami, ale jestem wytrenowana by na nie nie szczekać. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="boxnapieski">
-    <img src ="śmietanka.jpg" alt="smietanka" id="smietanka"/>
+        </section>
 
+        <h2>Poznaj nasze kociaki!</h2>
+        <section class="Kociaki">
 
-    <div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-    </svg>
-    </div>
-    </div>
+            <article class="boxnakotki">
+                <img src="dzaga.jpg" alt="Dzaga" id="dzaga" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 HEJ!! Jestem Dzaga, mam 11 miesięcy, a w
+                            schronisku jestem odkąd pamiętam.
+                            Jestem pełna energii i kooocham skakać po ścianach.
+                            Lubię też kocimiętkę i oduczam się niszczenia firanek czy rolet.
+                            Lubię się z innymi kotkami, a psy terroryzuję jak tylko mam okazję. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="boxnapieski">
-    <img src="bombardinio.jpg" alt="bombardinio" id="bombardinio"/>
+            <article class="boxnakotki">
+                <img src="chlebek.jpg" alt="Chlebek" id="chlebek" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Hej! Jestem Chlebek, mam 9 lat, w
+                            schronisku jestem od roku, a wcześniej mieszkałem na ulicy.
+                            Jestem spokojnym kotem, mimo, że nie miałem wcześniej domku i więcej śpię niż się wygłupiam.
+                            Z każdym zwierzakiem - naturalnie dogaduję się świetnie. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-<div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-    </svg>
-    </div>
-    </div>
+            <article class="boxnakotki">
+                <img src="dziunia.jpg" alt="Dziunia" id="dziunia" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 HEJKA!! Jestem Dziunia, mam 3 lata, a w
+                            schronisku jestem od pół roku.
+                            Jestem spokojnym kotem, ale przy Ziutku się odpalam, przez to, że to mój starszy brat i chciałabym znów mieć domek razem z nim.
+                            Kocham WSZYSTKO co się świeci lub błyszczy, a z innymi dogaduję się dobrze. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="boxnapieski">
-    <img src="mysza.jpg" alt="mysza" id="mysza"/>
+            <article class="boxnakotki">
+                <img src="max.jpg" alt="Max" id="max" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 HEJAA!! Jestem Max, mam 4 lata, a w
+                            schronisku jestem od zaledwie paru tygodni.
+                            Jestem kotkiem podwórkowym, gdy miałem domek to większość czasu spędzałem w ogródku.
+                            Mam w sobie nieuzasadnionie dużo energii więc najchętniej bawiłbym się 24/7,
+                            ale nie lubię innych zwierząt. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
+            <article class="boxnakotki">
+                <img src="ziutek.jpg" alt="Ziutek" id="ziutek" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Hej!! Jestem Ziutek, mam 6 lat, a w
+                            schronisku jestem od pół roku.
+                            Jestem bardziej energicznym kotem niż moja młodsza siostra Dziunia,
+                            ale wciąż jestem zazwyczaj spokojny.
+                            Dogaduję się z każdym, ale bez Dziuni nie dogadałbym się z nikim. 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-<div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-    </svg>
-    </div>
-    </div>
+            <article class="boxnakotki">
+                <img src="bandita.jpg" alt="Bandita" id="bandita" />
+                <div class="prostokat">
+                    <div class="opiszwierzakow">
+                        <p>🏠 Witam!! Jestem Bandita, mam 11 lat, a w
+                            schronisku jestem od 4 lat.
+                            Mimo swojego imienia nie jestem bandytą, ale lubię naszpącić.
+                            Całe życie wychodziłem z domu, wdawałem się w bójki z psami,
+                            ale też przynosiłem prezenty rodzicom, np. szczury.
+                            Lubię tylko koty, ale nie wszystkie! 🏠
+                        </p>
+                    </div>
+                </div>
+            </article>
 
-    <div class="boxnapieski">
-    <img src="bunia.jpg" alt="bunia" id="bunia"/>
-
-    <div class="prostokat">
-    <svg width="500" height="330">
-            <rect width="400" height="300" x="10" y="10" rx="20" ry="20" fill="#F2E5D9" />
-    </svg>
-    </div>
-    </div>
-</div> 
-
-        
-
-
-
+        </section>
     </main>
-    <footer>
 
+    <footer>
     </footer>
 </body>
 </html>

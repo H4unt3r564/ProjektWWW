@@ -1,136 +1,232 @@
-#pasekMenu {
-    width: 100%;
-    height: 40%;
+*{
+    box-sizing: border-box; /*layout sie nie rozjezdza; auotmatycznie zwartosc sie zmniejsza zeby wszystko dopasowac*/
+}
+
+body{
+    background: rgb(201, 185, 163);
+    margin:0;
+}
+
+/* MENU/LOGO */
+header{
+    position: sticky;
+    top:0;
+    z-index:9999999;
     background: #EFDCCC;
-    box-shadow: 12px 10px 12px #A18167;
-    display: flex;
+}
+
+#pasekMenu{
+    max-width: 100%;
+    width: 100vw;
+    height: 20.5vh;
+    top:0;
+    display:flex;
     justify-content: center;
-    margin: 0 auto;
+    background: #EFDCCC;
 }
 
-#pasekMenuContent {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#logo{
+    min-width:150px;
+    width:13vw;
+    height:100%;
 }
 
-#logo {
-    width: 100px;
-    height: auto;
+#logo img{
+    width:100%;
+    height:100%;
 }
 
-#logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#menu {
-    flex-grow: 1;
-    height: 100%;
-    /* border: 1% solid #A18167; */
-    display: flex;
+#menu{
+    width:100%;
+    height:100%;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
 
-#menu ul {
+#menu ul{
     list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 200px;
+    display:flex;
+    gap:4.76vw;
 }
 
-/* #menu ul li {
-    margin-left: 10%;
-} */
-
-#menu a {
+#menu a , .guzikDarkmode{
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1.37vh 2.74vw;
     text-decoration: none;
     color: #5d4532;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 2px solid #A18167;
+    border: 2px solid #A18157;
     border-radius: 15px;
-    box-shadow: 5px 10px #A18167;
-    transition: backround 0.3s, color 0.3s;
+    box-shadow: 5px 10px #A18157;
+    background: #EFDCCC;
 }
 
-#menu a:hover{
+#menu a:hover, #listaMenuGuzik:hover, .guzikDarkmode:hover{
     transform: scale(1.1);
+    /* transition: 0.5s; */
 }
 
-#glowna{
-    display:flex;
-    justify-content: center;
+/* ROZWIJANE MENU */
+#listaMenuGuzik{
+    display:none;
+    background: #EFDCCC; 
 }
 
-main{
-    width:100%;
-    height:500px;
-    /* border:1px solid rgb(65, 16, 200); */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-main>p{
-    padding-top:25px ;
+.ukryteMenu{
+    height:0;
+    overflow:hidden;
+    transition: height 0.4s ease-in-out;
 }
 
-#napis{
-    height: 70%;
+.pokazaneMenu{
+    height:11.5vh;
+    overflow:hidden;
+    transition: height 0.4s ease-in-out;
     display: flex;
     justify-content: center;
-    color:#5d4532;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
-}
-/* footer{
-    width:1000px;
-    height: 150px;
-    border:1px solid rgb(12, 211, 78);
-} */
-
-body{
-    background-color: #E9D3C0;
 }
 
-.Psiaki{
-    width:30%;
-    padding:5px;
+.ukryteMenu ul{
+    display: none;
+}
+
+.pokazaneMenu ul{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#ciapka, #bombardinio, #bunia, #mysza, #smietanka, #bruno, #szczyl{
-    width: 70%;
-    height: auto;
-    border: 1px solid #A18167;
-    border-radius: 10px;
-    margin-bottom: 15%;
-    margin-left: 70%;
-}
-.boxnapieski img {
-
-    border-radius: 10px;
-}
-
-.boxnapieski {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    list-style-type: none;
     justify-content: flex-start;
+    gap: 3vw;
+    padding-left: 0;
 }
 
-.prostokat svg{
-    display: block;
+.pokazaneMenu a{
+    display: inline-block;
+    padding: 1.37vh 2.74vw;
+    text-decoration: none;
+    color: #5d4532;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid #A18157;
+    border-radius: 15px;
+    box-shadow: 5px 10px #A18157;
+    background: #EFDCCC;
 }
+
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #5d4532;
+  margin-bottom: 40px;
+}
+
+.Psiaki, .Kociaki {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.boxnapieski, .boxnakotki {
+  display: flex;
+  gap: 30px;
+  background-color: #f2e5d9;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(93, 69, 50, 0.3);
+  flex-wrap: wrap;
+}
+
+.boxnapieski img, .boxnakotki img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.prostokat {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.opiszwierzakow p {
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  margin: 0;
+}
+
+
+@media(max-width: 768px){
+    #listaMenuGuzik{
+        display:block;
+        display: inline-block;
+        padding: 1.37vh 2.74vw;
+        text-decoration: none;
+        color: #5d4532;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: 2px solid #A18167;
+        border-radius: 15px;
+        box-shadow: 5px 10px #A18167;
+        transition: backround 0.3s, color 0.3s;
+        
+    }
+    #menu{
+        justify-content: space-evenly;
+    }
+    #menu a, #menu button:nth-child(1){
+        display: none;
+    }
+
+    .boxnapieski, .boxnakotki {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .prostokat {
+    padding-top: 15px;
+    align-items: flex-start;
+  }
+
+  .boxnapieski img, .boxnakotki img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+
+/* DARKMODE */
+body.dark-mode,
+body.dark-mode #pasekMenu,
+body.dark-mode footer,
+body.dark-mode #menu a,
+body.dark-mode #menu button,
+body.dark-mode p,
+body.dark-mode h2,
+body.dark-mode .guzikDarkmode,
+body.dark-mode #menuRozwijane,
+body.dark-mode .guzikDarkmode,
+body.dark-mode #menuRozwijane a,
+body.dark-mode .boxnakotki, 
+body.dark-mode .boxnapieski{
+    background:#6b5341;
+    color:#EFDCCC;
+}
+
+body.dark-mode .prostokat rect{
+    fill:#6b5341;
+}
+body.dark-mode text{
+    fill:#EFDCCC;
+}
+
 
 
