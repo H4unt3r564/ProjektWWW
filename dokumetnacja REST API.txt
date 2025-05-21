@@ -1,0 +1,139 @@
+
+
+BASE URL: https://test-production-d88d.up.railway.app/api
+------------------------------------
+OSOBY (Persons)
+------------------------------------
+
+1. Dodaj nową osobę
+------------------------------------
+POST /api/persons
+Content-Type: application/json
+
+Request Body:
+{
+  "firstName": "Jan",
+  "lastName": "Kowalski",
+  "address": "ul. Przykładowa 1",
+  "city": "Warszawa",
+  "mail": "jan.kowalski@example.com",
+  "phoneNumber": "123456789"
+}
+
+Response 200 OK:
+{
+  "personId": 1,
+  "firstName": "Jan",
+  ...
+}
+
+2. Pobierz wszystkie osoby
+------------------------------------
+GET /api/persons
+
+Response:
+[
+  {
+    "personId": 1,
+    "firstName": "Jan",
+    ...
+  },
+  ...
+]
+
+3. Pobierz osobę po ID
+------------------------------------
+GET /api/persons?id=1
+
+Response:
+{
+  "personId": 1,
+  "firstName": "Jan",
+  ...
+}
+
+------------------------------------
+ZWIERZĘTA (Animals)
+------------------------------------
+
+1. Dodaj nowe zwierzę
+------------------------------------
+POST /api/animal
+Content-Type: application/json
+
+Request Body:
+{
+  "animalType": "pies",
+  "animalName": "Burek",
+  "animalAge": 3,
+  "animalTimeInShelter": 120,
+  "animalFur": "sierść",
+  "animalSize": "medium"
+}
+
+Response 200 OK:
+{
+  "animalId": 2,
+  "animalName": "Burek",
+  ...
+}
+
+2. Pobierz zwierzę po ID
+------------------------------------
+GET /api/animal?id=2
+
+Response:
+{
+  "animalId": 2,
+  "animalName": "Burek",
+  ...
+}
+
+------------------------------------
+ ADOPCJE (Adoptions)
+------------------------------------
+
+1. Utwórz adopcję (połącz osobę i zwierzę)
+------------------------------------
+POST /api/adoptions
+Content-Type: application/json
+
+Request Body:
+{
+  "personId": 1,
+  "animalId": 2
+}
+
+Response 200 OK:
+{
+  "id": 1,
+  "person": {
+    "personId": 1,
+    "firstName": "Jan"
+  },
+  "animal": {
+    "animalId": 2,
+    "animalName": "Burek"
+  }
+}
+
+- Adopcja nie przypisuje zwierzęcia na stałe do osoby w tabeli animals — relacja jest w tabeli adopcji.
+
+------------------------------------
+ZDJĘCIA ZWIERZĄT (AnimalPhoto)
+------------------------------------
+
+1. Pobierz zdjęcie zwierzęcia po ID
+------------------------------------
+GET /api/photos?id=1
+
+Response:
+{
+  "id": 1,
+  "photoUrl": "https://example.com/images/pies-burek.jpg",
+  "animal": {
+    "animalId": 2,
+    "animalName": "Burek",
+    ...
+  }
+}
