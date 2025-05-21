@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <script src="formularz.js" defer></script>
+    <title>Strona główna</title>
+</head>
+<body>
+    <header>
+        <section id="pasekMenu">
+            <section id="logo">
+                <img src="logo.jpg" alt="logo" />
+            </section>
+            <section id="menu">
+                <ul>
+                    <li><a href="Strona Główna.html">Strona główna</a></li>
+                    <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><button class="guzikDarkmode">Darkmode</button></li>
+                </ul>
+                <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
+            </section>
+        </section>
+        <div id="menuRozwijane" class="ukryteMenu">
+            <ul>
+                <li><a href="Strona Główna.html">Strona główna</a></li>
+                <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><button class="guzikDarkmode">Darkmode</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="slider">
+            <button class="strzalka" onclick="zmianaObrazka('lewo')">&lt;</button>
+            <img src="nino.jpg" alt="obrazek" class="obrazek" />
+            <img src="bruno.jpg" alt="obrazek" class="obrazek" />
+            <img src="Chihiro.jpg" alt="obrazek" class="obrazek" />
+            <img src="niunia.jpg" alt="obrazek" class="obrazek" />
+            <button class="strzalka" onclick="zmianaObrazka('prawo')">&gt;</button>
+        </div>
+
+        <section id="czekajacezwierzaki">
+            <p>&#127872;&#127872;&#127872;</p>
+            <h3 style="font-family: Georgia, 'Times New Roman'">Pieski i kotki które czekają najdłużej</h3>
+            <div class="row">
+                <div class="zwierzak">
+                    <img src="" alt="Nino" class="zwierzakImg" data-id="2" />
+                    <p>Benji</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Bruno" class="zwierzakImg" data-id="3" />
+                    <p>Darwin</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Chihiro" class="zwierzakImg" data-id="4" />
+                    <p>Jumper</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Hugo" class="zwierzakImg" data-id="5" />
+                    <p>Kulka</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Ruda" class="zwierzakImg" data-id="6" />
+                    <p>Fufel</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Rockstar" class="zwierzakImg" data-id="7" />
+                    <p>Nira</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Niunia" class="zwierzakImg" data-id="8" />
+                    <p>Argo</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Misio" class="zwierzakImg" data-id="9" />
+                    <p>Luna</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Alya" class="zwierzakImg" data-id="10" />
+                    <p>Gucio</p>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" style="display:none;">
+                <div id="modalContent">
+                    <div id="modalZdjecie">
+                        <img src="" alt="Zdjęcie zwierzaka" />
+                    </div>
+                    <div id="modalDane">
+                        <h2 id="modalImie"></h2>
+                        <div id="modalWiek"></div>
+                        <div id="modalOpis"></div>
+                        <button id="adoptuj" onclick="window.location.href='rejestracja.html'">Adoptuj</button>
+                        <button id="guzikX" onclick="zamknijModal()">X</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Oadopcji">
+            <div class="prostokat">
+                <svg width="500" height="330">
+                    <rect width="400" height="300" x="10" y="10" rx="20" ry="20" />
+                    <text x="210" y="60" text-anchor="middle" font-size="30">
+                        O adopcji
+                    </text>
+                    <text x="50%" y="30%" text-anchor="middle" font-size="20">
+                        <tspan x="210" dy="5">Aby adoptować psa/kota</tspan>
+                        <tspan x="210" dy="20">przede wszystkim zalecamy</tspan>
+                        <tspan x="210" dy="20">umówić się na spotkanie, które mogą</tspan>
+                        <tspan x="210" dy="20">państwo zrealizować, dzwoniąc pod numer </tspan>
+                        <tspan x="210" dy="20">+48 444 555 666</tspan>
+                        <tspan x="210" dy="20">bądź umówić się osobiście w godzinach</tspan>
+                        <tspan x="210" dy="20">10:00 - 17:00</tspan>
+                        <tspan x="210" dy="20">Zapraszamy! &#128572;</tspan>
+                    </text>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
