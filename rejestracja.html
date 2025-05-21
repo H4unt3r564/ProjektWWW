@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="rejestracja.css" />
+    <script src="formularz.js" defer></script>
+    <title>Strona główna</title>
+</head>
+<body>
+    <header>
+        <section id="pasekMenu">
+            <section id="logo">
+                <img src="logo.jpg" alt="logo" />
+            </section>
+            <section id="menu">
+                <ul>
+                    <li><a href="Strona Główna.html">Strona główna</a></li>
+                    <li><a href="AdoptujPsa.html">Zwierzęta</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><button class="guzikDarkmode">Darkmode</button></li>
+                </ul>
+                <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
+            </section>
+        </section>
+        <div id="menuRozwijane" class="ukryteMenu">
+            <ul>
+                <li><a href="Strona Główna.html">Strona główna</a></li>
+                <li><a href="AdoptujPsa.html">Zwierzęta</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li><button class="guzikDarkmode">Darkmode</button></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="formularz">
+            <h1>Formularz <br/> zgłoszeniowy</h1>
+            <div id="inputy">
+                <form method="post" id="formularzRejestracji">
+                    <label for="imie">Imię: </label>
+                    <input type="text" name="imie" id="imie"><br>
+
+                    <label for="nazwisko">Nazwisko: </label>
+                    <input type="text" name="nazwisko" id="nazwisko"><br>
+
+                    <label for="tel">Telefon: </label>
+                    <input type="text" name="tel" id="tel"><br>
+
+                    <label for="email">E-mail: </label>
+                    <input type="text" name="email" id="email"><br>
+
+                    <label for="adres">Adres: </label>
+                    <input type="text" name="adres" id="adres"><br>
+
+                    <input id="submit" type="submit" name="wyslij">
+                </form>
+            </div>   
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+
+            <div class="footer-column">
+            <h3>Zwierzaki</h3>
+            <ul>
+                <li><a href="adoptujpsa.html#boxnakotki">> Koty</a></li>
+                <li><a href="adoptujpsa.html#boxnapieski">> Psy</a></li>
+            </ul></div>
+
+            <div class="footer-column">
+            <h3>Schronisko</h3>
+            <ul>
+                <li><a href="kontaktzasady.html#zasady">> Zasady adopcji</a></li>
+                <li><a href="kontaktzasady.html#kontakt">> Kontakt</a></li>
+            </ul></div></div>
+    </footer>
+</body>
+</html>

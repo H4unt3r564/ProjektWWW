@@ -16,21 +16,21 @@
             <section id="menu">
                 <ul>
                     <li><a href="Strona Główna.html">Strona główna</a></li>
-                    <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
-                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="AdoptujPsa.html">Zwierzęta</a></li>
+                    <li><a href="kontaktzasady.html">Kontakt</a></li>
                     <li><button class="guzikDarkmode">Darkmode</button></li>
                 </ul>
                 <button id="listaMenuGuzik" onclick="menuWysuwane()">☰</button>
             </section>
         </section>
         <div id="menuRozwijane" class="ukryteMenu">
-        <ul>
-            <li><a href="Strona Główna.html">Strona główna</a></li>
-            <li><a href="AdoptujPsa.html">Adoptuj Psa</a></li>
-            <li><a href="Kontakt.html">Kontakt</a></li>
-            <li><button class="guzikDarkmode">Darkmode</button></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href="Strona Główna.html">Strona główna</a></li>
+                <li><a href="AdoptujPsa.html">Zwierzęta</a></li>
+                <li><a href="kontaktzasady.html">Kontakt</a></li>
+                <li><button class="guzikDarkmode">Darkmode</button></li>
+            </ul>
+        </div>
     </header>
     <!-- <div id="menuRozwijane" class="ukryteMenu">
         <ul>
@@ -53,56 +53,59 @@
             <p>&#127872 &#127872 &#127872</p>
             <h3 style="font-family:Georgia,'Times New Roman'">Pieski i kotki które czekają najdłużej</h3>
         <div class="row">
-            <div class="zwierzak">
-                <img src ="nino.jpg" alt = "nino" id= "nino"/>
-                <p>Nino</p> 
-            </div>
-            <div class="zwierzak">
-                <img src ="bruno.jpg" alt = "bruno" id= "bruno"/>
-                <p>Bruno</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="Chihiro.jpg" alt = "chihiro" id="chihiro"/>
-                <p>Chihiro</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="Hugo.jpg" alt = "hugo" id= "hugo"/>
-                <p>Hugo</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="ruda.jpg" alt = "ruda" id= "ruda"/>
-                <p>Ruda</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="rockstar.jpg" alt = "rockstar" id= "rockstar"/>
-                <p>Rockstar</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="niunia.jpg" alt = "niunia" id= "niunia"/>
-                <p>Niunia</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="misio.jpg" alt = "misio" id= "misio"/>
-                <p>Misio</p>
-            </div>
-            <div class="zwierzak">
-                <img src ="alya.jpg" alt = "alya" id= "alya"/>
-                <p>Alya</p>
-            </div>
-        </div>
-        <div id="modal">
-            <div id="modalContent">
-                <div id="modalZdjecie">
-                    <img src="nino.jpg" alt="test">
+             <div class="zwierzak">
+                    <img src="" alt="Nino" class="zwierzakImg" data-id="2" />
+                    <p>Benji</p>
                 </div>
-                <div id="modalDane">
-                    <h2 id="modalImie"></h2>
-                    <div id="modalWiek"></div>
-                    <div id="modalOpis"></div>
-                    <button id="guzikX" onclick="zamknijModal()">X</button>
+                <div class="zwierzak">
+                    <img src="" alt="Bruno" class="zwierzakImg" data-id="3" />
+                    <p>Darwin</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Chihiro" class="zwierzakImg" data-id="4" />
+                    <p>Jumper</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Hugo" class="zwierzakImg" data-id="5" />
+                    <p>Kulka</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Ruda" class="zwierzakImg" data-id="6" />
+                    <p>Fufel</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Rockstar" class="zwierzakImg" data-id="7" />
+                    <p>Nira</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Niunia" class="zwierzakImg" data-id="8" />
+                    <p>Argo</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Misio" class="zwierzakImg" data-id="9" />
+                    <p>Luna</p>
+                </div>
+                <div class="zwierzak">
+                    <img src="" alt="Alya" class="zwierzakImg" data-id="10" />
+                    <p>Gucio</p>
                 </div>
             </div>
-        </div>
+
+            <!-- Modal -->
+            <div id="modal" style="display:none;">
+                <div id="modalContent">
+                    <div id="modalZdjecie">
+                        <img src="" alt="Zdjęcie zwierzaka" />
+                    </div>
+                    <div id="modalDane">
+                        <h2 id="modalImie"></h2>
+                        <div id="modalWiek"></div>
+                        <div id="modalOpis"></div>
+                        <button id="adoptuj" onclick="window.location.href='rejestracja.html'">Adoptuj</button>
+                        <button id="guzikX" onclick="zamknijModal()">X</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
     <section id="Oadopcji">
@@ -130,7 +133,21 @@
 
     </main>
     <footer>
+        <div class="footer-inner">
 
+            <div class="footer-column">
+            <h3>Zwierzaki</h3>
+            <ul>
+                <li><a href="adoptujpsa.html#boxnakotki">> Koty</a></li>
+                <li><a href="adoptujpsa.html#boxnapieski">> Psy</a></li>
+            </ul></div>
+
+            <div class="footer-column">
+            <h3>Schronisko</h3>
+            <ul>
+                <li><a href="kontaktzasady.html#zasady">> Zasady adopcji</a></li>
+                <li><a href="kontaktzasady.html#kontakt">> Kontakt</a></li>
+            </ul></div></div>
     </footer>
 </body>
 </html>

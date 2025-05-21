@@ -65,7 +65,7 @@ header{
     background: #EFDCCC;
 }
 
-#menu a:hover, #listaMenuGuzik:hover, .guzikDarkmode:hover, #guzikX:hover, #adoptuj:hover{
+#menu a:hover, #listaMenuGuzik:hover, .guzikDarkmode:hover, #guzikX:hover, #submit:hover{
     transform: scale(1.1);
     /* transition: 0.5s; */
 }
@@ -119,222 +119,15 @@ header{
 main{
     max-width:100%;
     width:100vw;
-    max-height:100%;
+    height:61vh;
     text-align: center;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-/*SLIDER*/
-#slider{
-    width:70%;
-    height:80vh;
-    border:1px solid black;
-    display: flex;
-    align-items: center;
-    position:relative; /*do animacji */
-    overflow:hidden; /*do animacji*/
-}
-
-.strzalka{
-    position: absolute;
-    top:45%;
-    z-index: 3;
-    border-radius: 50%;
-    border: 0;
-    opacity: 0.4;
-    width: 3rem;
-    height: 3rem;
-    font-size: x-large;
-    cursor: pointer;
-}
-
-.strzalka:hover{
-    opacity:0.7;
-    transition:0.7s;
-}
-
-.strzalka:first-of-type{
-    left:1%;
-}
-.strzalka:last-of-type{
-    right:1%;
-}
-
-.obrazek{
-    display: none;
-}
-
-.obrazekAktywny{
-    position:absolute;
-    display: block;
-    object-fit:cover;
-    width:100%;
-    height:100%;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes przewijanieZPrawej{
-    from{
-        transform: translateX(100%);
-        opacity:0;
-    }
-    to{
-        transform:translateX(0);
-        opacity:1;
-    }
-}
-
-@keyframes przewijanieZLewej{
-    from{
-        transform: translateX(-100%);
-        opacity:0;
-    }
-    to{
-        transform:translateX(0);
-        opacity:1;
-    }
-}
-
-/* ********* */
-
-
-/* OBRAZKI */
-#nino, #bruno, #chihiro, #hugo, #ruda, #rockstar, #niunia, #misio, #alya{
-    width: 70%;
-    height:37vh;
-    border: 1px solid #A18167;
-    border-radius: 10px;
-}
-
-.zwierzak{
-    min-width:300px;
-    width:20vw;
-    margin-left:1vw;
-    margin-top:2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.row{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.row p{
-    width: 70%;
-    border:1px solid #A18167;
-    border-radius: 5px;
-    color: #5d4532;
-    font-family:Georgia,'Times New Roman' 
-}
-
-/* MODALE */
-#modal{
-    display:none;
-    position: fixed;
-    top:55%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    max-width: 40vw;
-    max-height: 60vh;
-    width:40vw;
-    height:60vh;
-    background: rgb(201, 185, 163);
-    border: 1px solid black;
-    border-radius:10%;
-}
-
-#modalZdjecie{
-    width:40%;
-    height:65%;
-}
-
-#modalZdjecie img{
-    width:100%;
-    height:100%;
-    min-width:15.35vw;
-    border-radius:10px;
-    border: 1px solid #A18167;
-}   
-
-#modalContent{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:100%;
-    height:100%;
-}
-
-#modalDane{
-    width:30%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#adoptuj{
-     display: inline-block;
-    padding: 1.37vh 2.74vw;
-    text-decoration: none;
-    color: #5d4532;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 2px solid #A18157;
-    border-radius: 15px;
-    box-shadow: 5px 10px #A18157;
-    background: #EFDCCC;
-}
-
-#guzikX{
-    position:absolute;
-    right:5%;
-    top:5%;
-    display: inline-block;
-    padding: 1vh 1vw;
-    text-decoration: none;
-    color: #5d4532;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border: 2px solid #A18167;
-    border-radius: 15px;
-    box-shadow: 5px 10px #A18167;
-}
-
-
-/* ******** */
-
-
-/* PROSTOKAT NA DOLE */
-.prostokat {
-    width: 100%;
-    height: auto; 
-    overflow: hidden;
-    word-wrap: break-word;
-    text-align: center;
-    margin-left:3.2vw;
-}
-
-.prostokat svg rect {
-    filter: drop-shadow(10px 10px 10px rgba(161, 129, 103, 0.6));  /* Cień na prostokącie */
-    fill: #F2E5D9;
-}
-.prostokat svg text{
-    fill:#A18167;
-}
-
-/* ****** */
-
-main>p{
-    padding-top:25px ;
 }
 
 /* FOOTER */
-
 footer {
     height: 120px;
     width: 100%;
@@ -344,7 +137,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
 }
 
 .footer-inner {
@@ -417,18 +209,17 @@ footer {
 
 body.dark-mode,
 body.dark-mode #pasekMenu,
-body.dark-mode footer,
 body.dark-mode #menu a,
 body.dark-mode #menu button,
-body.dark-mode p,
-body.dark-mode h3,
-body.dark-mode #modal,
+body.dark-mode h1,
 body.dark-mode .guzikDarkmode,
 body.dark-mode #menuRozwijane,
 body.dark-mode .guzikDarkmode,
 body.dark-mode #menuRozwijane a,
 body.dark-mode footer,
-body.dark-mode footer a{
+body.dark-mode footer a,
+body.dark-mode label,
+body.dark-mode #submit{
     background:#6b5341;
     color:#EFDCCC;
 }
@@ -441,10 +232,53 @@ body.dark-mode header{
     border-bottom:1px solid #594536;
 }
 
-body.dark-mode .prostokat rect{
-    fill:#6b5341;
+/* FORMULARZ */
+
+
+#formularz{
+    width:40vw;
+    height:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    color:#5d4532;
 }
 
-body.dark-mode text{
-    fill:#EFDCCC;
+h1{
+    text-align: center;
+}
+
+#inputy{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input{
+    align-self: center;
+}
+
+#submit{
+    align-self: center;
+    display: inline-block;
+    padding: 1.37vh 2.74vw;
+    text-decoration: none;
+    color: #5d4532;
+    font-size:16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid #A18157;
+    border-radius: 15px;
+    box-shadow: 5px 10px #A18157;
+    background: #EFDCCC;
+}
+
+label{
+    font-size: large;
 }

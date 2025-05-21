@@ -1,6 +1,5 @@
 // SLIDER
-obrazki = document.querySelectorAll(".obrazek")
-
+const obrazki = document.querySelectorAll(".obrazek")
 obrazki[0].className = "obrazekAktywny"
 
 function zmianaObrazka(kierunek){
@@ -42,14 +41,14 @@ window.addEventListener("resize", () =>{
 })
 
 // MODALE
-modal = document.getElementById("modal");
-modalZdjecie = document.getElementById("modalZdjecie");
-modalImie = document.getElementById("modalImie");
-modalWiek = document.getElementById("modalWiek");
-modalOpis = document.getElementById("modalOpis");
-guzikX = document.getElementById("guzikX");
+const modal = document.getElementById("modal");
+const modalZdjecie = document.getElementById("modalZdjecie");
+const modalImie = document.getElementById("modalImie");
+const modalWiek = document.getElementById("modalWiek");
+const modalOpis = document.getElementById("modalOpis");
+const guzikX = document.getElementById("guzikX");
 
-zwierzaki = document.querySelectorAll(".row img");
+const zwierzaki = document.querySelectorAll(".row img");
 
 zwierzaki.forEach(img => {
     img.addEventListener("click", () => {
@@ -65,10 +64,66 @@ function zamknijModal(){
 }
 
 // DARkMODE
-guzikDarkmode = document.querySelectorAll(".guzikDarkmode");
+const guzikDarkmode = document.querySelectorAll(".guzikDarkmode");
+const logo = document.getElementById("logo").querySelector("img");
 
 guzikDarkmode.forEach(guzik =>
     guzik.addEventListener("click", () => {
-        document.querySelector("body").classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
+        czyDark = document.body.classList.contains("dark-mode");
+
+        //zmiana logo
+        logo.src = czyDark ? "nowelogo_darkmode.jpg" : "logo.jpg";
+        //localstorage na darkmode
+        localStorage.setItem("darkmode", czyDark);
     })
 )
+
+//LOCALSTORAGE
+window.onload = function(){
+    if(localStorage.getItem("darkmode") === "true"){
+        document.body.classList.add("dark-mode");
+        logo.src = "nowelogo_darkmode.jpg";
+    }else{
+        document.body.classList.remove("dark-mode");
+        logo.src = "logo.jpg";
+    }
+}
+
+// --- SEKWENCYJNE FETCHOWANIE ZDJĘĆ Z RETRY I FALLBACKIEM ---
+document.addEventListener("DOMContentLoaded", async () => {
+  const images = document.querySelectorAll(".zwierzakImg");
+
+  async function fetchWithRetry(url, retries = 10, delay = 500) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      if (retries > 0) {
+        await new Promise((r) => setTimeout(r, delay));
+        return fetchWithRetry(url, retries - 1, delay);
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  for (const img of images) {
+    const id = img.dataset.id;
+    try {
+      const data = await fetchWithRetry(
+        `https://test-production-d88d.up.railway.app/api/photos?id=${id}`
+      );
+      if (data.photoPath) {
+        img.src = data.photoPath;
+      } else {
+        console.warn(`Brak photoPath dla id ${id}, wstawiono domyślne`);
+        img.src = "default-image.jpg"; // ścieżka do obrazka domyślnego
+      }
+    } catch (err) {
+      console.error(`Błąd pobierania dla id ${id}:`, err);
+      img.src = "default-image.jpg"; // fallback
+    }
+  }
+});
